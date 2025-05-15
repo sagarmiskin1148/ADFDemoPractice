@@ -15,7 +15,6 @@ public class BaseClass {
     public static WebDriver driver;
     public static Properties prop;
 
-    // Load properties file
     public static void loadConfig() {
         try {
             prop = new Properties();
@@ -26,7 +25,6 @@ public class BaseClass {
         }
     }
 
-    // Initialize the WebDriver
     public static void initializeDriver() {
         loadConfig();
         String browser = prop.getProperty("browser");
@@ -37,14 +35,12 @@ public class BaseClass {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
-        
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTime));
         driver.get(url);
     }
 
-    
     public static void tearDownDriver() {
         if (driver != null) {
             driver.quit();
