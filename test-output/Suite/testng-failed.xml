@@ -3,13 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.adf.tests.LoginTest">
+      <class name="com.adf.tests.DashBoardLogoutTest">
         <methods>
+          <include name="logoutTest"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="invalidLoginTest"/>
         </methods>
-      </class> <!-- com.adf.tests.LoginTest -->
+      </class> <!-- com.adf.tests.DashBoardLogoutTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
