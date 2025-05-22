@@ -14,6 +14,6 @@ public class LibraryPageTest extends BaseClass {
         loginPage.login(username, password);
         Assert.assertTrue(driver.getTitle().contains("Dashboard"), "Login failed or title mismatch!");
 
-        dashboardPage.clicklibrary();
+        libraryPage.clicklibrary();
     }
 }

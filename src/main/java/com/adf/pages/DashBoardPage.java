@@ -17,7 +17,7 @@ public class DashBoardPage
     
     private By accountDropdown = By.xpath("//a[@class='dropdown profile top-head-link']");
     private By DropdownOptions = By.xpath("(//ul[@id='drop1']//li)[12]");
-    private By libraryfeature = By.xpath("//a[span[text()='Library']]");
+    
     
 
     		
@@ -56,11 +56,7 @@ public class DashBoardPage
         }
     }
 
-    public void clicklibrary()
-    {
-    	WebElement libEle=wait.until(ExpectedConditions.elementToBeClickable(libraryfeature));
-    	libEle.click();
-    }
+    
 
 
 }

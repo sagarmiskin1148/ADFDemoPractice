@@ -1,15 +1,12 @@
 package com.adf.base;
 
 import com.adf.pages.DashBoardPage;
+import com.adf.pages.LibraryPage;
 import com.adf.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
-
-
-
 
 import java.io.FileInputStream;
 import java.time.Duration;
@@ -19,6 +16,7 @@ public class BaseClass {
     protected WebDriver driver;
     protected LoginPage loginPage;
     protected DashBoardPage dashboardPage;
+    protected LibraryPage libraryPage;
     protected Properties prop;
 
     @BeforeMethod
@@ -36,6 +34,7 @@ public class BaseClass {
 
         loginPage = new LoginPage(driver);
         dashboardPage = new DashBoardPage(driver);
+        libraryPage = new LibraryPage();
     }
 
     /*@AfterMethod
