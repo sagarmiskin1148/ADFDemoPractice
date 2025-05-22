@@ -1,32 +1,47 @@
 package com.adf.base;
 
-import java.io.FileInputStream;
-import java.util.Properties;
-import java.time.Duration;
-
+import com.adf.pages.DashBoardPage;
+import com.adf.pages.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.*;
+
+
+
+
+
+import java.io.FileInputStream;
+import java.time.Duration;
+import java.util.Properties;
 
 public class BaseClass {
-    public static WebDriver driver;
-    public static Properties prop;
+    protected WebDriver driver;
+    protected LoginPage loginPage;
+    protected DashBoardPage dashboardPage;
+    protected Properties prop;
 
-    public static void initializeDriver() throws Exception {
+    @BeforeMethod
+    public void setUp() throws Exception {
+        FileInputStream fis = new FileInputStream("src/main/resources/config.properties");
         prop = new Properties();
-        prop.load(new FileInputStream("src/main/resources/config.properties"));
+        prop.load(fis);
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
         driver.get(prop.getProperty("url"));
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashBoardPage(driver);
     }
 
-    public static void tearDownDriver() {
+    /*@AfterMethod
+    public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
-    }
+    }*/
 }

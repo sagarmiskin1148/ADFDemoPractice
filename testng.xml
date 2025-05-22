@@ -5,6 +5,7 @@
     <classes>
       <class name="com.adf.tests.LoginTest"/>
       <class name="com.adf.tests.DashBoardLogoutTest"></class>
+      <class name="com.adf.tests.LibraryPageTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

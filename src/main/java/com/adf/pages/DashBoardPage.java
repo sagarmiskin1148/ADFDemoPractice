@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.WebDriverWait;   
 
 public class DashBoardPage 
 {
@@ -17,18 +17,26 @@ public class DashBoardPage
     
     private By accountDropdown = By.xpath("//a[@class='dropdown profile top-head-link']");
     private By DropdownOptions = By.xpath("(//ul[@id='drop1']//li)[12]");
+    private By libraryfeature = By.xpath("//a[span[text()='Library']]");
+    
 
     		
      public DashBoardPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
     
-    public void clickAccount()
-    {
-    	WebElement accountEle=wait.until(ExpectedConditions.elementToBeClickable(accountDropdown));
-    	accountEle.click();
-    }
+     public void clickAccount() {
+    	    try {
+    	        wait.until(ExpectedConditions.visibilityOfElementLocated(accountDropdown));
+    	        WebElement accountEle = wait.until(ExpectedConditions.elementToBeClickable(accountDropdown));
+    	        accountEle.click();
+    	    } catch (Exception e) {
+    	        System.out.println("Account dropdown not clickable: " + e.getMessage());
+    	        throw e;
+    	    }
+    	}
+
     
     public void DisplayDropdownAndClickLogout()
     {
@@ -46,6 +54,12 @@ public class DashBoardPage
                 break;
             }
         }
+    }
+
+    public void clicklibrary()
+    {
+    	WebElement libEle=wait.until(ExpectedConditions.elementToBeClickable(libraryfeature));
+    	libEle.click();
     }
 
 
