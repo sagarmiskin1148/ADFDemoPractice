@@ -8,11 +8,7 @@ public class DashBoardLogoutTest extends BaseClass {
 
     @Test
     public void logoutTest() {
-        String username = prop.getProperty("username");
-        String password = prop.getProperty("password");
-
-        loginPage.login(username, password);
-        Assert.assertTrue(driver.getTitle().contains("Dashboard"), "Login failed or title mismatch!");
+    Assert.assertTrue(driver.getTitle().contains("Dashboard"), "Login failed or title mismatch!");
 
         dashboardPage.clickAccount();
         dashboardPage.DisplayDropdownAndClickLogout();

@@ -30,12 +30,24 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.get(prop.getProperty("url"));
 
+
+        
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         loginPage = new LoginPage(driver);
         dashboardPage = new DashBoardPage(driver);
         libraryPage = new LibraryPage();
+        
+        
+        
+
+        String username = prop.getProperty("username");
+        String password = prop.getProperty("password");
+
+        loginPage.login(username, password);
     }
+    
+    
 
     /*@AfterMethod
     public void tearDown() {

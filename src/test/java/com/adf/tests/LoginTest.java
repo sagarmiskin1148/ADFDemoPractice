@@ -7,11 +7,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseClass {
 
     @Test
-    public void validLoginTest() {
-        String username = prop.getProperty("username");
-        String password = prop.getProperty("password");
-
-        loginPage.login(username, password);
-        Assert.assertTrue(driver.getTitle().contains("Dashboard"), "Login failed or title mismatch!");
+    public void validLoginTest() {       
+    Assert.assertTrue(driver.getTitle().contains("Dashboard"), "Login failed or title mismatch!");
     }
 }

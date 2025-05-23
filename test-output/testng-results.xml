@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-22T17:25:48 IST" name="Suite" finished-at="2025-05-22T17:26:47 IST" duration-ms="59732">
+  <suite started-at="2025-05-22T18:37:54 IST" name="Suite" finished-at="2025-05-22T18:38:37 IST" duration-ms="43060">
     <groups>
     </groups>
-    <test started-at="2025-05-22T17:25:48 IST" name="Test" finished-at="2025-05-22T17:26:47 IST" duration-ms="59732">
+    <test started-at="2025-05-22T18:37:54 IST" name="Test" finished-at="2025-05-22T18:38:37 IST" duration-ms="43060">
       <class name="com.adf.tests.LibraryPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.LibraryPageTest@451001e5]" started-at="2025-05-22T17:26:41 IST" name="setUp" finished-at="2025-05-22T17:26:43 IST" duration-ms="2498" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.LibraryPageTest@451001e5]" started-at="2025-05-22T18:38:30 IST" name="setUp" finished-at="2025-05-22T18:38:37 IST" duration-ms="7105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="clicklibrary()[pri:0, instance:com.adf.tests.LibraryPageTest@451001e5]" started-at="2025-05-22T17:26:43 IST" name="clicklibrary" finished-at="2025-05-22T17:26:47 IST" duration-ms="3964" status="FAIL">
+        <test-method signature="clicklibrary()[pri:0, instance:com.adf.tests.LibraryPageTest@451001e5]" started-at="2025-05-22T18:38:37 IST" name="clicklibrary" finished-at="2025-05-22T18:38:37 IST" duration-ms="19" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "this.wait" is null]]>
@@ -19,7 +19,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "this.wait" is null
 at com.adf.pages.LibraryPage.clicklibrary(LibraryPage.java:25)
-at com.adf.tests.LibraryPageTest.clicklibrary(LibraryPageTest.java:17)
+at com.adf.tests.LibraryPageTest.clicklibrary(LibraryPageTest.java:13)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,21 +56,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- clicklibrary -->
       </class> <!-- com.adf.tests.LibraryPageTest -->
       <class name="com.adf.tests.DashBoardLogoutTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.DashBoardLogoutTest@221a3fa4]" started-at="2025-05-22T17:25:55 IST" name="setUp" finished-at="2025-05-22T17:26:00 IST" duration-ms="4799" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.DashBoardLogoutTest@221a3fa4]" started-at="2025-05-22T18:38:01 IST" name="setUp" finished-at="2025-05-22T18:38:08 IST" duration-ms="6401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="logoutTest()[pri:0, instance:com.adf.tests.DashBoardLogoutTest@221a3fa4]" started-at="2025-05-22T17:26:00 IST" name="logoutTest" finished-at="2025-05-22T17:26:41 IST" duration-ms="41088" status="PASS">
+        <test-method signature="logoutTest()[pri:0, instance:com.adf.tests.DashBoardLogoutTest@221a3fa4]" started-at="2025-05-22T18:38:08 IST" name="logoutTest" finished-at="2025-05-22T18:38:30 IST" duration-ms="22132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutTest -->
       </class> <!-- com.adf.tests.DashBoardLogoutTest -->
       <class name="com.adf.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.LoginTest@712625fd]" started-at="2025-05-22T17:25:48 IST" name="setUp" finished-at="2025-05-22T17:25:53 IST" duration-ms="5601" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adf.tests.LoginTest@712625fd]" started-at="2025-05-22T18:37:54 IST" name="setUp" finished-at="2025-05-22T18:38:01 IST" duration-ms="7258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.adf.tests.LoginTest@712625fd]" started-at="2025-05-22T17:25:53 IST" name="validLoginTest" finished-at="2025-05-22T17:25:55 IST" duration-ms="1676" status="PASS">
+        <test-method signature="validLoginTest()[pri:0, instance:com.adf.tests.LoginTest@712625fd]" started-at="2025-05-22T18:38:01 IST" name="validLoginTest" finished-at="2025-05-22T18:38:01 IST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
