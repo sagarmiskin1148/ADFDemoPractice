@@ -36,7 +36,7 @@ public class BaseClass {
 
         loginPage = new LoginPage(driver);
         dashboardPage = new DashBoardPage(driver);
-        libraryPage = new LibraryPage();
+        libraryPage = new LibraryPage(driver);
         
         
         

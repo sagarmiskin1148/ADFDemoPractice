@@ -17,8 +17,15 @@ public class LibraryPage
 	
 	private By libraryfeature = By.xpath("//a[span[text()='Library']]");
     private By libraryselectSpecalitydropdown = By.xpath("(//a[text()='select'])[1]");
+    private By selectAnesthesiology = By.xpath("(//div//ul)[1]//li[text()='Anesthesiology']");
     
 
+    public LibraryPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+    
+    }
+    
     
     public void clicklibrary()
     {
@@ -29,6 +36,11 @@ public class LibraryPage
 
     	WebElement libraryDD=wait.until(ExpectedConditions.elementToBeClickable(libraryselectSpecalitydropdown));
     	libraryDD.click();
+    	
+    	
+
+    	WebElement selectAnths=wait.until(ExpectedConditions.elementToBeClickable(selectAnesthesiology));
+    	selectAnths.click();
     	
     	
     }
